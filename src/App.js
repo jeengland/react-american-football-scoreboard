@@ -7,17 +7,7 @@ function App() {
   //TODO: STEP 2 - Establish your applictaion's state with some useState hooks.  You'll need one for the home score and another for the away score.
   const [home, setHome] = useState(0);
   const [away, setAway] = useState(0);
-  const homeTeam = 'Lions';
-  const awayTeam = 'Tigers';
-  const scoreSet = (team, points) => {
-    if (team === homeTeam) {
-      setHome(home + points);
-    } else if (team === awayTeam) {
-      setAway(away + points);
-    } else {
-      console.log('Invalid teamname');
-    }
-  }
+  const scoreSet = (team, points) => (team === 'Lions') ? setHome(home + points) : setAway(away + points);
   return (
     <div className="container">
       <section className="scoreboard">
